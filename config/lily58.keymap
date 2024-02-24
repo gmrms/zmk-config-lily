@@ -31,14 +31,24 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
+        r_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
         };
 
-        delete {
+        r_delete {
             bindings = <&kp DELETE>;
             key-positions = <46 47>;
+        };
+
+        l_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <14 15>;
+        };
+
+        l_delete {
+            bindings = <&kp DELETE>;
+            key-positions = <38 39>;
         };
     };
 
@@ -54,11 +64,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | BSPC  | RAISE| ENTER | GUI   |
 
             bindings = <
-&kp ESC    &kp N1       &kp N2       &kp N3     &kp N4     &kp N5                               &kp N6  &kp N7     &kp N8     &kp N9       &kp N0         &kp GRAVE
-&kp TAB    &kp Q        &kp W        &kp F      &kp P      &kp G                                &kp J   &kp L      &kp U      &kp Y        &kp SEMICOLON  &kp NON_US_BACKSLASH
-&kp LSHFT  &mt LCTRL A  &mt LSHFT R  &kp S      &kp T      &kp D                                &kp H   &kp N      &kp E      &mt RSHFT I  &mt RCTRL O    &kp SQT
-&kp LCTRL  &kp Z        &kp X        &kp C      &kp V      &kp B   &kp LEFT_WIN  &kp RIGHT_WIN  &kp K   &kp M      &kp COMMA  &kp DOT      &kp FSLH       &td0
-                                     &kp LCTRL  &kp LSHFT  &mo 1   &kp SPACE     &kp ENTER      &sl 2   &kp RSHFT  &kp RCTRL
+&kp ESC    &kp N1       &kp N2  &kp N3    &kp N4     &kp N5                               &kp N6  &kp N7     &kp N8     &kp N9      &kp N0           &kp GRAVE
+&kp TAB    &kp Q        &kp W   &kp F     &kp P      &kp G                                &kp J   &kp L      &kp U      &kp Y       &kp SEMICOLON    &kp NON_US_BACKSLASH
+&kp LSHFT  &kp A        &kp R   &kp S     &kp T      &kp D                                &kp H   &kp N      &kp E      &kp I       &kp O            &kp SQT
+&kp LCTRL  &mt LCTRL Z  &kp X   &kp C     &kp V      &kp B   &kp LEFT_WIN  &kp RIGHT_WIN  &kp K   &kp M      &kp COMMA  &kp PERIOD  &mt RCTRL SLASH  &kp RCTRL
+                                &kp LALT  &kp LSHFT  &mo 1   &kp SPACE     &kp ENTER      &sl 2   &kp RSHFT  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
