@@ -56,16 +56,6 @@
             key-positions = <38 39>;
         };
 
-        l_win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <41 40>;
-        };
-
-        r_win {
-            bindings = <&kp RIGHT_WIN>;
-            key-positions = <44 45>;
-        };
-
         l_tab {
             bindings = <&kp TAB>;
             key-positions = <16 17>;
@@ -79,6 +69,31 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <13 14>;
+        };
+
+        caps {
+            bindings = <&caps_word>;
+            key-positions = <29 30>;
+        };
+
+        r_bkspc_word {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <20 21 19>;
+        };
+
+        l_bkspc_word {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <14 15 16>;
+        };
+
+        r_delete_word {
+            bindings = <&kp LC(DELETE)>;
+            key-positions = <45 46 47>;
+        };
+
+        l_delete_word {
+            bindings = <&kp LC(DELETE)>;
+            key-positions = <40 39 38>;
         };
     };
 
@@ -94,11 +109,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | BSPC  | RAISE| ENTER | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2          &kp N3        &kp N4            &kp N5                                 &kp N6  &kp N7             &kp N8       &kp N9           &kp N0         &kp GRAVE
-&kp TAB    &kp Q   &kp W           &kp F         &kp P             &kp G                                  &kp J   &kp L              &kp U        &kp Y            &kp SEMICOLON  &kp NON_US_BACKSLASH
-&kp LSHFT  &kp A   &mt LEFT_ALT R  &mt LCTRL S   &mt LEFT_SHIFT T  &kp D                                  &kp H   &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &kp O          &kp RIGHT_SHIFT
-&kp LCTRL  &kp Z   &kp X           &kp C         &kp V             &kp B   &kp LEFT_WIN  &kp RIGHT_WIN    &kp K   &kp M              &kp COMMA    &kp PERIOD       &kp SLASH      &kp RCTRL
-                                   &kp LEFT_WIN  &mo 3             &mo 1   &kp SPACE     &mt RCTRL ENTER  &sl 2   &kp RALT           &kp RALT
+&kp ESC    &kp N1  &kp N2          &kp N3        &kp N4            &kp N5                                         &kp N6           &kp N7             &kp N8       &kp N9           &kp N0         &kp GRAVE
+&kp TAB    &kp Q   &kp W           &kp F         &kp P             &kp G                                          &kp J            &kp L              &kp U        &kp Y            &kp SEMICOLON  &kp NON_US_BACKSLASH
+&kp LSHFT  &kp A   &mt LEFT_ALT R  &mt LCTRL S   &mt LEFT_SHIFT T  &mt LEFT_WIN D                                 &mt RIGHT_WIN H  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &kp O          &kp RIGHT_SHIFT
+&kp LCTRL  &kp Z   &kp X           &kp C         &kp V             &kp B           &kp LEFT_WIN  &kp RIGHT_WIN    &kp K            &kp M              &kp COMMA    &kp PERIOD       &kp SLASH      &kp RCTRL
+                                   &kp LEFT_WIN  &mo 3             &mo 1           &kp SPACE     &mt RCTRL ENTER  &sl 2            &kp RALT           &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -140,11 +155,11 @@
 
         numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans      &trans        &trans  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp ASTRK        &kp N7      &kp N8        &kp N9  &kp KP_EQUAL     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp KP_SUBTRACT  &kp N4      &kp N5        &kp N6  &kp KP_NUMBER_0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PLUS         &kp N1      &kp N2        &kp N3  &trans           &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans           &kp KP_DOT  &kp KP_COMMA
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans      &trans     &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp ASTRK  &kp N7      &kp N8     &kp N9  &kp EQUAL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp MINUS  &kp N4      &kp N5     &kp N6  &kp N0     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PLUS   &kp N1      &kp N2     &kp N3  &kp SLASH  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans     &kp PERIOD  &kp COMMA
             >;
         };
     };
